@@ -1,0 +1,260 @@
+<?xml version='1.0' encoding='utf-8'?>
+<mxfile host="app.diagrams.net" type="device">
+  <diagram id="kigali-erd" name="Database ERD">
+    <mxGraphModel dx="1800" dy="1600" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="0" pageScale="1" pageWidth="1800" pageHeight="1600" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="title" value="KIGALI MARKET | DATABASE ERD" style="text;html=0;align=left;fontSize=26;fontStyle=1;fontColor=#16324F;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="40" y="20" width="1500" height="45" />
+        </mxCell>
+        <mxCell id="subtitle" value="9 tables | PK = Primary Key   FK = Foreign Key   UQ = Unique   NULL = Optional; all others required | TIN identifies buyer; points per store" style="text;html=0;align=left;fontSize=14;fontColor=#526477;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="40" y="65" width="1550" height="30" />
+        </mxCell>
+        <mxCell id="Vendors" value="Vendors" style="swimlane;html=0;startSize=38;horizontal=1;rounded=1;arcSize=8;fillColor=#16324F;swimlaneFillColor=#FFFFFF;fontColor=#FFFFFF;strokeColor=#16324F;fontSize=17;fontStyle=1;collapsible=0;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="40" y="110" width="330" height="183" />
+        </mxCell>
+        <mxCell id="Vendors.vendor_id" value="PK  vendor_id : BIGINT" style="text;html=0;align=left;verticalAlign=middle;spacingLeft=10;fontSize=11;fontFamily=Consolas;fontColor=#16324F;fillColor=#EEF5F8;" vertex="1" parent="Vendors">
+          <mxGeometry as="geometry" x="0" y="38" width="330" height="29" />
+        </mxCell>
+        <mxCell id="Vendors.full_name" value="full_name : VARCHAR(150)" style="text;html=0;align=left;verticalAlign=middle;spacingLeft=10;fontSize=11;fontFamily=Consolas;fontColor=#16324F;fillColor=#FFFFFF;" vertex="1" parent="Vendors">
+          <mxGeometry as="geometry" x="0" y="67" width="330" height="29" />
+        </mxCell>
+        <mxCell id="Vendors.phone" value="phone : VARCHAR(25)" style="text;html=0;align=left;verticalAlign=middle;spacingLeft=10;fontSize=11;fontFamily=Consolas;fontColor=#16324F;fillColor=#EEF5F8;" vertex="1" parent="Vendors">
+          <mxGeometry as="geometry" x="0" y="96" width="330" height="29" />
+        </mxCell>
+        <mxCell id="Vendors.email" value="NULL  email : VARCHAR(150)" style="text;html=0;align=left;verticalAlign=middle;spacingLeft=10;fontSize=11;fontFamily=Consolas;fontColor=#16324F;fillColor=#FFFFFF;" vertex="1" parent="Vendors">
+          <mxGeometry as="geometry" x="0" y="125" width="330" height="29" />
+        </mxCell>
+        <mxCell id="Vendors.created_at" value="created_at : TIMESTAMP" style="text;html=0;align=left;verticalAlign=middle;spacingLeft=10;fontSize=11;fontFamily=Consolas;fontColor=#16324F;fillColor=#EEF5F8;" vertex="1" parent="Vendors">
+          <mxGeometry as="geometry" x="0" y="154" width="330" height="29" />
+        </mxCell>
+        <mxCell id="Stalls" value="Stalls" style="swimlane;html=0;startSize=38;horizontal=1;rounded=1;arcSize=8;fillColor=#16324F;swimlaneFillColor=#FFFFFF;fontColor=#FFFFFF;strokeColor=#16324F;fontSize=17;fontStyle=1;collapsible=0;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="440" y="110" width="330" height="270" />
+        </mxCell>
+        <mxCell id="Stalls.stall_id" value="PK  stall_id : BIGINT" style="text;html=0;align=left;verticalAlign=middle;spacingLeft=10;fontSize=11;fontFamily=Consolas;fontColor=#16324F;fillColor=#EEF5F8;" vertex="1" parent="Stalls">
+          <mxGeometry as="geometry" x="0" y="38" width="330" height="29" />
+        </mxCell>
+        <mxCell id="Stalls.vendor_id" value="FK  vendor_id : BIGINT" style="text;html=0;align=left;verticalAlign=middle;spacingLeft=10;fontSize=11;fontFamily=Consolas;fontColor=#16324F;fillColor=#FFFFFF;" vertex="1" parent="Stalls">
+          <mxGeometry as="geometry" x="0" y="67" width="330" height="29" />
+        </mxCell>
+        <mxCell id="Stalls.stall_code" value="UQ  stall_code : VARCHAR(30)" style="text;html=0;align=left;verticalAlign=middle;spacingLeft=10;fontSize=11;fontFamily=Consolas;fontColor=#16324F;fillColor=#EEF5F8;" vertex="1" parent="Stalls">
+          <mxGeometry as="geometry" x="0" y="96" width="330" height="29" />
+        </mxCell>
+        <mxCell id="Stalls.stall_name" value="stall_name : VARCHAR(150)" style="text;html=0;align=left;verticalAlign=middle;spacingLeft=10;fontSize=11;fontFamily=Consolas;fontColor=#16324F;fillColor=#FFFFFF;" vertex="1" parent="Stalls">
+          <mxGeometry as="geometry" x="0" y="125" width="330" height="29" />
+        </mxCell>
+        <mxCell id="Stalls.location" value="location : VARCHAR(200)" style="text;html=0;align=left;verticalAlign=middle;spacingLeft=10;fontSize=11;fontFamily=Consolas;fontColor=#16324F;fillColor=#EEF5F8;" vertex="1" parent="Stalls">
+          <mxGeometry as="geometry" x="0" y="154" width="330" height="29" />
+        </mxCell>
+        <mxCell id="Stalls.commission_rate" value="commission_rate : DECIMAL(5,2)" style="text;html=0;align=left;verticalAlign=middle;spacingLeft=10;fontSize=11;fontFamily=Consolas;fontColor=#16324F;fillColor=#FFFFFF;" vertex="1" parent="Stalls">
+          <mxGeometry as="geometry" x="0" y="183" width="330" height="29" />
+        </mxCell>
+        <mxCell id="Stalls.status" value="status : VARCHAR(20)" style="text;html=0;align=left;verticalAlign=middle;spacingLeft=10;fontSize=11;fontFamily=Consolas;fontColor=#16324F;fillColor=#EEF5F8;" vertex="1" parent="Stalls">
+          <mxGeometry as="geometry" x="0" y="212" width="330" height="29" />
+        </mxCell>
+        <mxCell id="Stalls.created_at" value="created_at : TIMESTAMP" style="text;html=0;align=left;verticalAlign=middle;spacingLeft=10;fontSize=11;fontFamily=Consolas;fontColor=#16324F;fillColor=#FFFFFF;" vertex="1" parent="Stalls">
+          <mxGeometry as="geometry" x="0" y="241" width="330" height="29" />
+        </mxCell>
+        <mxCell id="Products" value="Products" style="swimlane;html=0;startSize=38;horizontal=1;rounded=1;arcSize=8;fillColor=#16324F;swimlaneFillColor=#FFFFFF;fontColor=#FFFFFF;strokeColor=#16324F;fontSize=17;fontStyle=1;collapsible=0;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="1240" y="110" width="330" height="212" />
+        </mxCell>
+        <mxCell id="Products.product_id" value="PK  product_id : BIGINT" style="text;html=0;align=left;verticalAlign=middle;spacingLeft=10;fontSize=11;fontFamily=Consolas;fontColor=#16324F;fillColor=#EEF5F8;" vertex="1" parent="Products">
+          <mxGeometry as="geometry" x="0" y="38" width="330" height="29" />
+        </mxCell>
+        <mxCell id="Products.product_name" value="product_name : VARCHAR(150)" style="text;html=0;align=left;verticalAlign=middle;spacingLeft=10;fontSize=11;fontFamily=Consolas;fontColor=#16324F;fillColor=#FFFFFF;" vertex="1" parent="Products">
+          <mxGeometry as="geometry" x="0" y="67" width="330" height="29" />
+        </mxCell>
+        <mxCell id="Products.category" value="category : VARCHAR(100)" style="text;html=0;align=left;verticalAlign=middle;spacingLeft=10;fontSize=11;fontFamily=Consolas;fontColor=#16324F;fillColor=#EEF5F8;" vertex="1" parent="Products">
+          <mxGeometry as="geometry" x="0" y="96" width="330" height="29" />
+        </mxCell>
+        <mxCell id="Products.unit" value="unit : VARCHAR(30)" style="text;html=0;align=left;verticalAlign=middle;spacingLeft=10;fontSize=11;fontFamily=Consolas;fontColor=#16324F;fillColor=#FFFFFF;" vertex="1" parent="Products">
+          <mxGeometry as="geometry" x="0" y="125" width="330" height="29" />
+        </mxCell>
+        <mxCell id="Products.description" value="NULL  description : VARCHAR(500)" style="text;html=0;align=left;verticalAlign=middle;spacingLeft=10;fontSize=11;fontFamily=Consolas;fontColor=#16324F;fillColor=#EEF5F8;" vertex="1" parent="Products">
+          <mxGeometry as="geometry" x="0" y="154" width="330" height="29" />
+        </mxCell>
+        <mxCell id="Products.is_active" value="is_active : BOOLEAN" style="text;html=0;align=left;verticalAlign=middle;spacingLeft=10;fontSize=11;fontFamily=Consolas;fontColor=#16324F;fillColor=#FFFFFF;" vertex="1" parent="Products">
+          <mxGeometry as="geometry" x="0" y="183" width="330" height="29" />
+        </mxCell>
+        <mxCell id="Inventory" value="Inventory" style="swimlane;html=0;startSize=38;horizontal=1;rounded=1;arcSize=8;fillColor=#16324F;swimlaneFillColor=#FFFFFF;fontColor=#FFFFFF;strokeColor=#16324F;fontSize=17;fontStyle=1;collapsible=0;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="840" y="110" width="330" height="241" />
+        </mxCell>
+        <mxCell id="Inventory.inventory_id" value="PK  inventory_id : BIGINT" style="text;html=0;align=left;verticalAlign=middle;spacingLeft=10;fontSize=11;fontFamily=Consolas;fontColor=#16324F;fillColor=#EEF5F8;" vertex="1" parent="Inventory">
+          <mxGeometry as="geometry" x="0" y="38" width="330" height="29" />
+        </mxCell>
+        <mxCell id="Inventory.stall_id" value="FK  stall_id : BIGINT" style="text;html=0;align=left;verticalAlign=middle;spacingLeft=10;fontSize=11;fontFamily=Consolas;fontColor=#16324F;fillColor=#FFFFFF;" vertex="1" parent="Inventory">
+          <mxGeometry as="geometry" x="0" y="67" width="330" height="29" />
+        </mxCell>
+        <mxCell id="Inventory.product_id" value="FK  product_id : BIGINT" style="text;html=0;align=left;verticalAlign=middle;spacingLeft=10;fontSize=11;fontFamily=Consolas;fontColor=#16324F;fillColor=#EEF5F8;" vertex="1" parent="Inventory">
+          <mxGeometry as="geometry" x="0" y="96" width="330" height="29" />
+        </mxCell>
+        <mxCell id="Inventory.quantity_available" value="quantity_available : DECIMAL(12,3)" style="text;html=0;align=left;verticalAlign=middle;spacingLeft=10;fontSize=11;fontFamily=Consolas;fontColor=#16324F;fillColor=#FFFFFF;" vertex="1" parent="Inventory">
+          <mxGeometry as="geometry" x="0" y="125" width="330" height="29" />
+        </mxCell>
+        <mxCell id="Inventory.selling_price" value="selling_price : DECIMAL(14,2)" style="text;html=0;align=left;verticalAlign=middle;spacingLeft=10;fontSize=11;fontFamily=Consolas;fontColor=#16324F;fillColor=#EEF5F8;" vertex="1" parent="Inventory">
+          <mxGeometry as="geometry" x="0" y="154" width="330" height="29" />
+        </mxCell>
+        <mxCell id="Inventory.reorder_level" value="reorder_level : DECIMAL(12,3)" style="text;html=0;align=left;verticalAlign=middle;spacingLeft=10;fontSize=11;fontFamily=Consolas;fontColor=#16324F;fillColor=#FFFFFF;" vertex="1" parent="Inventory">
+          <mxGeometry as="geometry" x="0" y="183" width="330" height="29" />
+        </mxCell>
+        <mxCell id="Inventory.updated_at" value="updated_at : TIMESTAMP" style="text;html=0;align=left;verticalAlign=middle;spacingLeft=10;fontSize=11;fontFamily=Consolas;fontColor=#16324F;fillColor=#EEF5F8;" vertex="1" parent="Inventory">
+          <mxGeometry as="geometry" x="0" y="212" width="330" height="29" />
+        </mxCell>
+        <mxCell id="Loyalty_Accounts" value="Loyalty_Accounts" style="swimlane;html=0;startSize=38;horizontal=1;rounded=1;arcSize=8;fillColor=#166B64;swimlaneFillColor=#FFFFFF;fontColor=#FFFFFF;strokeColor=#166B64;fontSize=17;fontStyle=1;collapsible=0;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="440" y="610" width="330" height="183" />
+        </mxCell>
+        <mxCell id="Loyalty_Accounts.loyalty_account_id" value="PK  loyalty_account_id : BIGINT" style="text;html=0;align=left;verticalAlign=middle;spacingLeft=10;fontSize=11;fontFamily=Consolas;fontColor=#16324F;fillColor=#EEF5F8;" vertex="1" parent="Loyalty_Accounts">
+          <mxGeometry as="geometry" x="0" y="38" width="330" height="29" />
+        </mxCell>
+        <mxCell id="Loyalty_Accounts.customer_tin" value="NOT NULL  customer_tin : VARCHAR(30)" style="text;html=0;align=left;verticalAlign=middle;spacingLeft=10;fontSize=11;fontFamily=Consolas;fontColor=#16324F;fillColor=#FFFFFF;" vertex="1" parent="Loyalty_Accounts">
+          <mxGeometry as="geometry" x="0" y="67" width="330" height="29" />
+        </mxCell>
+        <mxCell id="Loyalty_Accounts.stall_id" value="FK  stall_id : BIGINT" style="text;html=0;align=left;verticalAlign=middle;spacingLeft=10;fontSize=11;fontFamily=Consolas;fontColor=#16324F;fillColor=#EEF5F8;" vertex="1" parent="Loyalty_Accounts">
+          <mxGeometry as="geometry" x="0" y="96" width="330" height="29" />
+        </mxCell>
+        <mxCell id="Loyalty_Accounts.points_balance" value="points_balance : INTEGER" style="text;html=0;align=left;verticalAlign=middle;spacingLeft=10;fontSize=11;fontFamily=Consolas;fontColor=#16324F;fillColor=#FFFFFF;" vertex="1" parent="Loyalty_Accounts">
+          <mxGeometry as="geometry" x="0" y="125" width="330" height="29" />
+        </mxCell>
+        <mxCell id="Loyalty_Accounts.updated_at" value="updated_at : TIMESTAMP" style="text;html=0;align=left;verticalAlign=middle;spacingLeft=10;fontSize=11;fontFamily=Consolas;fontColor=#16324F;fillColor=#EEF5F8;" vertex="1" parent="Loyalty_Accounts">
+          <mxGeometry as="geometry" x="0" y="154" width="330" height="29" />
+        </mxCell>
+        <mxCell id="Sales" value="Sales" style="swimlane;html=0;startSize=38;horizontal=1;rounded=1;arcSize=8;fillColor=#16324F;swimlaneFillColor=#FFFFFF;fontColor=#FFFFFF;strokeColor=#16324F;fontSize=17;fontStyle=1;collapsible=0;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="840" y="610" width="330" height="328" />
+        </mxCell>
+        <mxCell id="Sales.sale_id" value="PK  sale_id : BIGINT" style="text;html=0;align=left;verticalAlign=middle;spacingLeft=10;fontSize=11;fontFamily=Consolas;fontColor=#16324F;fillColor=#EEF5F8;" vertex="1" parent="Sales">
+          <mxGeometry as="geometry" x="0" y="38" width="330" height="29" />
+        </mxCell>
+        <mxCell id="Sales.stall_id" value="FK  stall_id : BIGINT" style="text;html=0;align=left;verticalAlign=middle;spacingLeft=10;fontSize=11;fontFamily=Consolas;fontColor=#16324F;fillColor=#FFFFFF;" vertex="1" parent="Sales">
+          <mxGeometry as="geometry" x="0" y="67" width="330" height="29" />
+        </mxCell>
+        <mxCell id="Sales.customer_tin" value="NOT NULL  customer_tin : VARCHAR(30)" style="text;html=0;align=left;verticalAlign=middle;spacingLeft=10;fontSize=11;fontFamily=Consolas;fontColor=#16324F;fillColor=#EEF5F8;" vertex="1" parent="Sales">
+          <mxGeometry as="geometry" x="0" y="96" width="330" height="29" />
+        </mxCell>
+        <mxCell id="Sales.sale_date" value="sale_date : TIMESTAMP" style="text;html=0;align=left;verticalAlign=middle;spacingLeft=10;fontSize=11;fontFamily=Consolas;fontColor=#16324F;fillColor=#FFFFFF;" vertex="1" parent="Sales">
+          <mxGeometry as="geometry" x="0" y="125" width="330" height="29" />
+        </mxCell>
+        <mxCell id="Sales.subtotal" value="subtotal : DECIMAL(14,2)" style="text;html=0;align=left;verticalAlign=middle;spacingLeft=10;fontSize=11;fontFamily=Consolas;fontColor=#16324F;fillColor=#EEF5F8;" vertex="1" parent="Sales">
+          <mxGeometry as="geometry" x="0" y="154" width="330" height="29" />
+        </mxCell>
+        <mxCell id="Sales.loyalty_discount" value="loyalty_discount : DECIMAL(14,2)" style="text;html=0;align=left;verticalAlign=middle;spacingLeft=10;fontSize=11;fontFamily=Consolas;fontColor=#16324F;fillColor=#FFFFFF;" vertex="1" parent="Sales">
+          <mxGeometry as="geometry" x="0" y="183" width="330" height="29" />
+        </mxCell>
+        <mxCell id="Sales.total_amount" value="total_amount : DECIMAL(14,2)" style="text;html=0;align=left;verticalAlign=middle;spacingLeft=10;fontSize=11;fontFamily=Consolas;fontColor=#16324F;fillColor=#EEF5F8;" vertex="1" parent="Sales">
+          <mxGeometry as="geometry" x="0" y="212" width="330" height="29" />
+        </mxCell>
+        <mxCell id="Sales.payment_method" value="payment_method : VARCHAR(30)" style="text;html=0;align=left;verticalAlign=middle;spacingLeft=10;fontSize=11;fontFamily=Consolas;fontColor=#16324F;fillColor=#FFFFFF;" vertex="1" parent="Sales">
+          <mxGeometry as="geometry" x="0" y="241" width="330" height="29" />
+        </mxCell>
+        <mxCell id="Sales.status" value="status : VARCHAR(20)" style="text;html=0;align=left;verticalAlign=middle;spacingLeft=10;fontSize=11;fontFamily=Consolas;fontColor=#16324F;fillColor=#EEF5F8;" vertex="1" parent="Sales">
+          <mxGeometry as="geometry" x="0" y="270" width="330" height="29" />
+        </mxCell>
+        <mxCell id="Sales.request_key" value="UQ  request_key : VARCHAR(100)" style="text;html=0;align=left;verticalAlign=middle;spacingLeft=10;fontSize=11;fontFamily=Consolas;fontColor=#16324F;fillColor=#FFFFFF;" vertex="1" parent="Sales">
+          <mxGeometry as="geometry" x="0" y="299" width="330" height="29" />
+        </mxCell>
+        <mxCell id="Sale_Items" value="Sale_Items" style="swimlane;html=0;startSize=38;horizontal=1;rounded=1;arcSize=8;fillColor=#16324F;swimlaneFillColor=#FFFFFF;fontColor=#FFFFFF;strokeColor=#16324F;fontSize=17;fontStyle=1;collapsible=0;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="1240" y="610" width="330" height="212" />
+        </mxCell>
+        <mxCell id="Sale_Items.sale_item_id" value="PK  sale_item_id : BIGINT" style="text;html=0;align=left;verticalAlign=middle;spacingLeft=10;fontSize=11;fontFamily=Consolas;fontColor=#16324F;fillColor=#EEF5F8;" vertex="1" parent="Sale_Items">
+          <mxGeometry as="geometry" x="0" y="38" width="330" height="29" />
+        </mxCell>
+        <mxCell id="Sale_Items.sale_id" value="FK  sale_id : BIGINT" style="text;html=0;align=left;verticalAlign=middle;spacingLeft=10;fontSize=11;fontFamily=Consolas;fontColor=#16324F;fillColor=#FFFFFF;" vertex="1" parent="Sale_Items">
+          <mxGeometry as="geometry" x="0" y="67" width="330" height="29" />
+        </mxCell>
+        <mxCell id="Sale_Items.inventory_id" value="FK  inventory_id : BIGINT" style="text;html=0;align=left;verticalAlign=middle;spacingLeft=10;fontSize=11;fontFamily=Consolas;fontColor=#16324F;fillColor=#EEF5F8;" vertex="1" parent="Sale_Items">
+          <mxGeometry as="geometry" x="0" y="96" width="330" height="29" />
+        </mxCell>
+        <mxCell id="Sale_Items.quantity" value="quantity : DECIMAL(12,3)" style="text;html=0;align=left;verticalAlign=middle;spacingLeft=10;fontSize=11;fontFamily=Consolas;fontColor=#16324F;fillColor=#FFFFFF;" vertex="1" parent="Sale_Items">
+          <mxGeometry as="geometry" x="0" y="125" width="330" height="29" />
+        </mxCell>
+        <mxCell id="Sale_Items.unit_price" value="unit_price : DECIMAL(14,2)" style="text;html=0;align=left;verticalAlign=middle;spacingLeft=10;fontSize=11;fontFamily=Consolas;fontColor=#16324F;fillColor=#EEF5F8;" vertex="1" parent="Sale_Items">
+          <mxGeometry as="geometry" x="0" y="154" width="330" height="29" />
+        </mxCell>
+        <mxCell id="Sale_Items.line_total" value="line_total : DECIMAL(14,2)" style="text;html=0;align=left;verticalAlign=middle;spacingLeft=10;fontSize=11;fontFamily=Consolas;fontColor=#16324F;fillColor=#FFFFFF;" vertex="1" parent="Sale_Items">
+          <mxGeometry as="geometry" x="0" y="183" width="330" height="29" />
+        </mxCell>
+        <mxCell id="Loyalty_Transactions" value="Loyalty_Transactions" style="swimlane;html=0;startSize=38;horizontal=1;rounded=1;arcSize=8;fillColor=#166B64;swimlaneFillColor=#FFFFFF;fontColor=#FFFFFF;strokeColor=#166B64;fontSize=17;fontStyle=1;collapsible=0;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="440" y="1110" width="330" height="212" />
+        </mxCell>
+        <mxCell id="Loyalty_Transactions.loyalty_transaction_id" value="PK  loyalty_transaction_id : BIGINT" style="text;html=0;align=left;verticalAlign=middle;spacingLeft=10;fontSize=11;fontFamily=Consolas;fontColor=#16324F;fillColor=#EEF5F8;" vertex="1" parent="Loyalty_Transactions">
+          <mxGeometry as="geometry" x="0" y="38" width="330" height="29" />
+        </mxCell>
+        <mxCell id="Loyalty_Transactions.loyalty_account_id" value="FK  loyalty_account_id : BIGINT" style="text;html=0;align=left;verticalAlign=middle;spacingLeft=10;fontSize=11;fontFamily=Consolas;fontColor=#16324F;fillColor=#FFFFFF;" vertex="1" parent="Loyalty_Transactions">
+          <mxGeometry as="geometry" x="0" y="67" width="330" height="29" />
+        </mxCell>
+        <mxCell id="Loyalty_Transactions.sale_id" value="FK  sale_id : BIGINT" style="text;html=0;align=left;verticalAlign=middle;spacingLeft=10;fontSize=11;fontFamily=Consolas;fontColor=#16324F;fillColor=#EEF5F8;" vertex="1" parent="Loyalty_Transactions">
+          <mxGeometry as="geometry" x="0" y="96" width="330" height="29" />
+        </mxCell>
+        <mxCell id="Loyalty_Transactions.transaction_type" value="transaction_type : VARCHAR(20)" style="text;html=0;align=left;verticalAlign=middle;spacingLeft=10;fontSize=11;fontFamily=Consolas;fontColor=#16324F;fillColor=#FFFFFF;" vertex="1" parent="Loyalty_Transactions">
+          <mxGeometry as="geometry" x="0" y="125" width="330" height="29" />
+        </mxCell>
+        <mxCell id="Loyalty_Transactions.points" value="points : INTEGER" style="text;html=0;align=left;verticalAlign=middle;spacingLeft=10;fontSize=11;fontFamily=Consolas;fontColor=#16324F;fillColor=#EEF5F8;" vertex="1" parent="Loyalty_Transactions">
+          <mxGeometry as="geometry" x="0" y="154" width="330" height="29" />
+        </mxCell>
+        <mxCell id="Loyalty_Transactions.created_at" value="created_at : TIMESTAMP" style="text;html=0;align=left;verticalAlign=middle;spacingLeft=10;fontSize=11;fontFamily=Consolas;fontColor=#16324F;fillColor=#FFFFFF;" vertex="1" parent="Loyalty_Transactions">
+          <mxGeometry as="geometry" x="0" y="183" width="330" height="29" />
+        </mxCell>
+        <mxCell id="Platform_Transactions" value="Platform_Transactions" style="swimlane;html=0;startSize=38;horizontal=1;rounded=1;arcSize=8;fillColor=#16324F;swimlaneFillColor=#FFFFFF;fontColor=#FFFFFF;strokeColor=#16324F;fontSize=17;fontStyle=1;collapsible=0;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="1240" y="1110" width="330" height="270" />
+        </mxCell>
+        <mxCell id="Platform_Transactions.platform_transaction_id" value="PK  platform_transaction_id : BIGINT" style="text;html=0;align=left;verticalAlign=middle;spacingLeft=10;fontSize=11;fontFamily=Consolas;fontColor=#16324F;fillColor=#EEF5F8;" vertex="1" parent="Platform_Transactions">
+          <mxGeometry as="geometry" x="0" y="38" width="330" height="29" />
+        </mxCell>
+        <mxCell id="Platform_Transactions.sale_id" value="FK, UQ  sale_id : BIGINT" style="text;html=0;align=left;verticalAlign=middle;spacingLeft=10;fontSize=11;fontFamily=Consolas;fontColor=#16324F;fillColor=#FFFFFF;" vertex="1" parent="Platform_Transactions">
+          <mxGeometry as="geometry" x="0" y="67" width="330" height="29" />
+        </mxCell>
+        <mxCell id="Platform_Transactions.commission_base" value="commission_base : DECIMAL(14,2)" style="text;html=0;align=left;verticalAlign=middle;spacingLeft=10;fontSize=11;fontFamily=Consolas;fontColor=#16324F;fillColor=#EEF5F8;" vertex="1" parent="Platform_Transactions">
+          <mxGeometry as="geometry" x="0" y="96" width="330" height="29" />
+        </mxCell>
+        <mxCell id="Platform_Transactions.commission_rate" value="commission_rate : DECIMAL(5,2)" style="text;html=0;align=left;verticalAlign=middle;spacingLeft=10;fontSize=11;fontFamily=Consolas;fontColor=#16324F;fillColor=#FFFFFF;" vertex="1" parent="Platform_Transactions">
+          <mxGeometry as="geometry" x="0" y="125" width="330" height="29" />
+        </mxCell>
+        <mxCell id="Platform_Transactions.commission_amount" value="commission_amount : DECIMAL(14,2)" style="text;html=0;align=left;verticalAlign=middle;spacingLeft=10;fontSize=11;fontFamily=Consolas;fontColor=#16324F;fillColor=#EEF5F8;" vertex="1" parent="Platform_Transactions">
+          <mxGeometry as="geometry" x="0" y="154" width="330" height="29" />
+        </mxCell>
+        <mxCell id="Platform_Transactions.settlement_status" value="settlement_status : VARCHAR(20)" style="text;html=0;align=left;verticalAlign=middle;spacingLeft=10;fontSize=11;fontFamily=Consolas;fontColor=#16324F;fillColor=#FFFFFF;" vertex="1" parent="Platform_Transactions">
+          <mxGeometry as="geometry" x="0" y="183" width="330" height="29" />
+        </mxCell>
+        <mxCell id="Platform_Transactions.created_at" value="created_at : TIMESTAMP" style="text;html=0;align=left;verticalAlign=middle;spacingLeft=10;fontSize=11;fontFamily=Consolas;fontColor=#16324F;fillColor=#EEF5F8;" vertex="1" parent="Platform_Transactions">
+          <mxGeometry as="geometry" x="0" y="212" width="330" height="29" />
+        </mxCell>
+        <mxCell id="Platform_Transactions.settled_at" value="NULL  settled_at : TIMESTAMP" style="text;html=0;align=left;verticalAlign=middle;spacingLeft=10;fontSize=11;fontFamily=Consolas;fontColor=#16324F;fillColor=#FFFFFF;" vertex="1" parent="Platform_Transactions">
+          <mxGeometry as="geometry" x="0" y="241" width="330" height="29" />
+        </mxCell>
+        <mxCell id="rel0" value="1 : 0..N" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=0;startArrow=ERone;endArrow=ERzeroToMany;startFill=0;endFill=0;strokeColor=#627D98;strokeWidth=1.5;fontSize=12;fontColor=#16324F;labelBackgroundColor=#FFFFFF;jettySize=auto;" edge="1" parent="1" source="Vendors" target="Stalls.vendor_id">
+          <mxGeometry as="geometry" relative="1" />
+        </mxCell>
+        <mxCell id="rel1" value="1 : 0..N" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=0;startArrow=ERone;endArrow=ERzeroToMany;startFill=0;endFill=0;strokeColor=#627D98;strokeWidth=1.5;fontSize=12;fontColor=#16324F;labelBackgroundColor=#FFFFFF;jettySize=auto;" edge="1" parent="1" source="Stalls" target="Inventory.stall_id">
+          <mxGeometry as="geometry" relative="1" />
+        </mxCell>
+        <mxCell id="rel2" value="1 : 0..N" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=0;startArrow=ERone;endArrow=ERzeroToMany;startFill=0;endFill=0;strokeColor=#627D98;strokeWidth=1.5;fontSize=12;fontColor=#16324F;labelBackgroundColor=#FFFFFF;jettySize=auto;" edge="1" parent="1" source="Products" target="Inventory.product_id">
+          <mxGeometry as="geometry" relative="1" />
+        </mxCell>
+        <mxCell id="rel3" value="1 : 0..N" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=0;startArrow=ERone;endArrow=ERzeroToMany;startFill=0;endFill=0;strokeColor=#627D98;strokeWidth=1.5;fontSize=12;fontColor=#16324F;labelBackgroundColor=#FFFFFF;jettySize=auto;" edge="1" parent="1" source="Stalls" target="Loyalty_Accounts.stall_id">
+          <mxGeometry as="geometry" relative="1" />
+        </mxCell>
+        <mxCell id="rel4" value="1 : 0..N" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=0;startArrow=ERone;endArrow=ERzeroToMany;startFill=0;endFill=0;strokeColor=#627D98;strokeWidth=1.5;fontSize=12;fontColor=#16324F;labelBackgroundColor=#FFFFFF;jettySize=auto;" edge="1" parent="1" source="Stalls" target="Sales.stall_id">
+          <mxGeometry as="geometry" relative="1" />
+        </mxCell>
+        <mxCell id="rel5" value="1 : 0..N" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=0;startArrow=ERone;endArrow=ERzeroToMany;startFill=0;endFill=0;strokeColor=#627D98;strokeWidth=1.5;fontSize=12;fontColor=#16324F;labelBackgroundColor=#FFFFFF;jettySize=auto;" edge="1" parent="1" source="Sales" target="Sale_Items.sale_id">
+          <mxGeometry as="geometry" relative="1" />
+        </mxCell>
+        <mxCell id="rel6" value="1 : 0..N" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=0;startArrow=ERone;endArrow=ERzeroToMany;startFill=0;endFill=0;strokeColor=#627D98;strokeWidth=1.5;fontSize=12;fontColor=#16324F;labelBackgroundColor=#FFFFFF;jettySize=auto;" edge="1" parent="1" source="Inventory" target="Sale_Items.inventory_id">
+          <mxGeometry as="geometry" relative="1" />
+        </mxCell>
+        <mxCell id="rel7" value="1 : 0..N" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=0;startArrow=ERone;endArrow=ERzeroToMany;startFill=0;endFill=0;strokeColor=#627D98;strokeWidth=1.5;fontSize=12;fontColor=#16324F;labelBackgroundColor=#FFFFFF;jettySize=auto;" edge="1" parent="1" source="Loyalty_Accounts" target="Loyalty_Transactions.loyalty_account_id">
+          <mxGeometry as="geometry" relative="1" />
+        </mxCell>
+        <mxCell id="rel8" value="1 : 0..N" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=0;startArrow=ERone;endArrow=ERzeroToMany;startFill=0;endFill=0;strokeColor=#627D98;strokeWidth=1.5;fontSize=12;fontColor=#16324F;labelBackgroundColor=#FFFFFF;jettySize=auto;" edge="1" parent="1" source="Sales" target="Loyalty_Transactions.sale_id">
+          <mxGeometry as="geometry" relative="1" />
+        </mxCell>
+        <mxCell id="rel9" value="1 : 0..1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=0;startArrow=ERone;endArrow=ERzeroToOne;startFill=0;endFill=0;strokeColor=#627D98;strokeWidth=1.5;fontSize=12;fontColor=#16324F;labelBackgroundColor=#FFFFFF;jettySize=auto;" edge="1" parent="1" source="Sales" target="Platform_Transactions.sale_id">
+          <mxGeometry as="geometry" relative="1" />
+        </mxCell>
+        <mxCell id="rules" value="DESIGN RULES | DIRECT TIN v1.2&#10;&#10;Sales.customer_tin: required, nonblank, trimmed text; repeats across sales.&#10;No customer profile table; no customer name, phone or email collected.&#10;TIN on sale -&gt; per-store loyalty account -&gt; points movements.&#10;TIN identifies the buyer; purchase value determines points.&#10;Inventory: UNIQUE(stall_id, product_id); quantity &gt;= 0.&#10;Loyalty_Accounts: UNIQUE(customer_tin, stall_id); balance &gt;= 0.&#10;Loyalty_Transactions: UNIQUE(sale_id, transaction_type); points &gt; 0.&#10;EARN / REDEEM account must match sale customer_tin and store.&#10;Sale item inventory must belong to the sale store.&#10;Completed sale: at least one item and exactly one commission.&#10;Total = subtotal - loyalty discount; amounts &gt;= 0.&#10;Commission uses the rate saved at sale time (0-100%).&#10;&#10;ATOMIC SALE TRANSACTION&#10;Sale + items + stock + loyalty + commission commit together.&#10;Lock affected stock and loyalty account during concurrent sales.&#10;&#10;Scope: platform fees on customer purchases; supplier purchasing&#10;and returns are not included in this initial design." style="rounded=1;whiteSpace=wrap;html=0;align=left;verticalAlign=top;spacing=16;fontSize=13;fontColor=#16324F;fillColor=#FFF8E7;strokeColor=#E7C873;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="40" y="1510" width="1530" height="450" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
