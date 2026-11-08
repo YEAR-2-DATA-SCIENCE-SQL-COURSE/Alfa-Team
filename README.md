@@ -20,6 +20,8 @@ Assigned subject: **Transactions and Concurrency**
 | Mohamed Omer | 202513481 | **Team Leader**; SQL and execution evidence |
 | Abdalrhim Ahmed Elnor | 202513366 | Presentation and GitHub submission |
 | Moayed Elrashid | 202512280 | README documentation |
+| Amar Ahmed Alduom | 202512897 | Project/member|
+| Amin Ali| 202512480 | Project/member |
 
 The instructor approved the four-member team. All members participated in research and study. Individual contributions are detailed in Section 16.
 
